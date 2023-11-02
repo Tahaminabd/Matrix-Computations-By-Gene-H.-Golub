@@ -40,12 +40,16 @@ To access and interact with the solutions, you'll need to have Julia and Pluto.j
    ```julia
    using Pkg
    Pkg.add("Pluto")
-## Clone this repository: git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
+   
+## Clone this repository: 
+
+git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ## Run Pluto.jl:
 
 ```import Pluto
 Pluto.run()
+## Run
 
 This will open the Pluto notebook in your web browser, where you can interact with the solutions.
 
