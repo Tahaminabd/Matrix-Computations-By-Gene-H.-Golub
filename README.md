@@ -46,28 +46,26 @@ To access and interact with the solutions, you'll need to have Julia and Pluto.j
 git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ## Run Pluto.jl
-
 ```julia
-ìmport Pluto
+import Pluto
 Pluto.run()
 
 ## Run
-
 This will open the Pluto notebook in your web browser, where you can interact with the solutions.
 
 ## Contributing
-
-Contributions are welcome! If you have additional solutions or improvements to existing ones, please follow our [contributing guidelines](CONTRIBUTING.md).
+Contributions are welcome! If you have additional solutions or improvements to existing ones, please follow our contributing guidelines.
 
 ## License
-
-This project is licensed under the [MIT License](LICENSE).
+MIT License.
 
 ## Author
-
-- Tahamina Akter
-- TU Braunschweig
-
+Tahamina Akter
+TU Braunschweig
 ## Acknowledgments
-
 We would like to express our gratitude to Gene H. Golub for his invaluable contributions to the field of numerical linear algebra, which have inspired this collection of solutions.
+
+
+
+
+
