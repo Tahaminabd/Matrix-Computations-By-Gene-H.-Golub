@@ -47,13 +47,13 @@ git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ## Run Pluto.jl:
 
-```import Pluto
+import Pluto
 Pluto.run()
 
 
 This will open the Pluto notebook in your web browser, where you can interact with the solutions.
 
-## Contributing
+## Contributing:
 Contributions are welcome! If you have additional solutions or improvements to existing ones, please follow our contributing guidelines.
 
 ## License
