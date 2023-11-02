@@ -47,11 +47,9 @@ git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ## Run Pluto.jl:
 
-import Pluto
+```import Pluto
 Pluto.run()
 
-
-## Run
 
 This will open the Pluto notebook in your web browser, where you can interact with the solutions.
 
@@ -59,8 +57,11 @@ This will open the Pluto notebook in your web browser, where you can interact wi
 Contributions are welcome! If you have additional solutions or improvements to existing ones, please follow our contributing guidelines.
 
 ## License
+
  MIT License.
+
 ## Author:
+
 Tahamina Akter, 
 TU Braunschweig
 
