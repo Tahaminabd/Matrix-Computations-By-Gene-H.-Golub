@@ -43,7 +43,8 @@ To access and interact with the solutions, you'll need to have Julia and Pluto.j
 ## Clone this repository: git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ## Run Pluto.jl:
-import Pluto
+
+```import Pluto
 Pluto.run()
 
 This will open the Pluto notebook in your web browser, where you can interact with the solutions.
@@ -54,7 +55,7 @@ Contributions are welcome! If you have additional solutions or improvements to e
 ## License
  MIT License.
 ## Author:
-Tahamina Akter
+Tahamina Akter, 
 TU Braunschweig
 
 ## Acknowledgments
