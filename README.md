@@ -47,8 +47,9 @@ git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ## Run Pluto.jl
 
-`ìmport Pluto
-Pluto.run()`
+```julia
+ìmport Pluto
+Pluto.run()
 
 ####
 
