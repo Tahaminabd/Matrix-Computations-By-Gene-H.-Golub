@@ -47,7 +47,7 @@ git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ## Run Pluto.jl:
 
-```import Pluto
+import Pluto
 Pluto.run()
 
 
