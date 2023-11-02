@@ -1,1 +1,104 @@
+begin
+	using PyPlot
+using CalculusWithJulia
+using Plots
+using ForwardDiff
+using SymPy
+using Roots
+using QuadGK
+using JSON
+	using GridVisualize
+using ExtendableGrids
+import Contour: contours, levels, level, lines, coordinates
+end
+##
+function condition_estimator_algorithm(T)
+    n = size(T, 1)
+    p = zeros(n)
+	y=zeros(n)
+    y_plus = zeros(n)
+    y_minus = zeros(n)
+    
+    for k = n:-1:1
+        y_plus[k] = (1 - p[k]) / T[k, k]
+        y_minus[k] = (-1 - p[k]) / T[k, k]
+        
+        p_plus = p[1:k-1] + T[1:k-1, k] .* y_plus[1:k-1]
+        p_minus = p[1:k-1] + T[1:k-1, k] .* y_minus[1:k-1]
+        
+        if norm(y_plus[1:k], Inf) + norm(p_plus, Inf) <= norm(y_minus[1:k], Inf) + norm(p_minus, Inf)
+            y[k] = y_plus[k]
+            p[1:k-1] = p_plus
+        else
+            y[k] = y_minus[k]
+            p[1:k-1] = p_minus
+        end
+    end
+    
+    K = norm(T , Inf)*norm(y, Inf)
+	y=y/norm(y, Inf)
+    
+    return y, K
+end
+##
+begin
+	T = [2.0 1.0 1.0;
+	     0.0 3.0 1.0;
+	     0.0 0.0 4.0]
+	y,K=condition_estimator_algorithm(T)
+	####
+	println(y,K)
+end
 
+######
+
+
+#function condition_estimator_algorithm_Bn(Bn)
+begin
+	
+	# Define the matrix Bn
+	n = 3
+	#Bn = UpperTriangular(ones(n, n))  # Use im for the imaginary unit
+	#println(Bn)
+	Bn=[1 -1 -1
+	0 1 -1
+	0 0 1]
+	println(Bn)
+	# Initialize variables for the algorithm
+	p = zeros(n)
+	y=zeros(n)
+	p_plus=zeros(n)
+	p_minus=zeros(n)
+	y_plus = zeros(n)
+	y_minus = zeros(n)
+	
+	# Iterate through the rows of Bn
+	for k = n:-1:1
+	    y_plus[k] = (1 - p[k]) / Bn[k, k]
+	    y_minus[k] = (-1 - p[k]) / Bn[k, k]
+	
+	    
+	    p_plus[1:k-1] = p[1:k-1] + Bn[1:k-1, k] .* y_plus[k]
+	    p_minus[1:k-1] = p[1:k-1] + Bn[1:k-1, k] .* y_minus[k]
+	
+	     if abs(y_plus[k]) + norm(p_plus[1:k-1], 1) >= abs(y_minus[k]) + norm(p_minus[1:k-1], 1)
+	        y[k] = y_plus[k]
+	        p[1:k-1] = p_plus[1:k-1]
+	    else
+	        y[k] = y_minus[k]
+	        p[1:k-1] = p_minus[1:k-1]
+	    end
+	end
+	
+	# Compute the scalar K as the infinity norm of Bn * y
+	K = opnorm(Bn, Inf)*norm(y, Inf)
+	y=y/norm(y, Inf)
+	#Kk=1/norm(Bn*y, Inf)
+	#return y,K
+	######
+
+	#y,K=condition_estimator_algorithm_Bn(Bn)
+	println(y,K)
+	
+	
+end
