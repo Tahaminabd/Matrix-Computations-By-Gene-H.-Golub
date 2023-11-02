@@ -49,7 +49,7 @@ git clone https://github.com/Tahaminabd/matrix-computations-solutions.git
 
 ```julia
 ìmport Pluto
-Pluto.run("1234")
+Pluto.run()
 
 
 
@@ -57,19 +57,3 @@ Pluto.run("1234")
 
 
 
-This will open the Pluto notebook in your web browser, where you can interact with the solutions.
-
-## Contributing
-Contributions are welcome! If you have additional solutions or improvements to existing ones, please follow our contributing guidelines.
-
-## License
-
- MIT License.
-
-## Author
-
-Tahamina Akter, 
-TU Braunschweig
-
-## Acknowledgments
-We would like to express our gratitude to Gene H. Golub for his invaluable contributions to the field of numerical linear algebra, which have inspired this collection of solutions.
