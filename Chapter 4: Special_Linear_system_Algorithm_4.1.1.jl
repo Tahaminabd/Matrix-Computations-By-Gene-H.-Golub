@@ -58,6 +58,13 @@ L, D = LDLT_factorization(A)
 # ╔═╡ fe3432a3-2e43-484c-a635-b38661673490
 # Display L and D
 (L, D)
+# Example usage
+A = [5.0 2.0 2.0; 2.0 5.0 4.0; 2.0 4.0 6.0]  # Replace with symmetric matrix
+L, D = LDLT_factorization(A)
+# Display L and D
+(L, D)
+
+L*D*transpose(L) ## LDL^T=A (proved)
 
 # ╔═╡ a5d8f9cf-050c-48c4-989f-74b99b88f959
 # ╠═╡ disabled = true
