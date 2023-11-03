@@ -30,11 +30,19 @@ function LDLT_factorization(A)
         for i = 1:j - 1
             v = A[j, i] * A[i, i]
             A[j, j] = A[j, j]- A[j, i] * v
-            A[j+1:n, j] = A[j+1:n, j] - A[j+1:n, i] * v
-        end
+            
+		end
+		for i=1:j-1
+            v = A[j, i] * A[i, i]
+            A[j+1:n, j] = (A[j+1:n, j] - A[j+1:n, i] * v)
+			
+		end
+		A[j+1:n, j]=A[j+1:n, j]/A[j,j]	
+    
 
         # Store the diagonal element in D
         D[j, j] = A[j, j]
+		L[j+1:n, j] = A[j+1:n, j] 
     end
 
     return L, D
