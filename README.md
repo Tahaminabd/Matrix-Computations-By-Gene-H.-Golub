@@ -56,12 +56,8 @@ This will open the Pluto notebook in your web browser, where you can interact wi
 ## Contributing
 Contributions are welcome! If you have additional solutions or improvements to existing ones, please follow our contributing guidelines.
 
-## License
-MIT License.
 
-## Author
-Tahamina Akter,
-TU Braunschweig
+
 ## Acknowledgments
 We would like to express our gratitude to Gene H. Golub  and Charles F. Van Loan for their invaluable contributions to the field of numerical linear algebra, which have inspired this collection of solutions.
 
